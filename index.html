@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <title>GreenByte | Digital Carbon Tracker</title>
+  <meta name="description" content="GreenByte makes your digital carbon footprint visible and actionable.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="icon" type="image/png" href="icons/logo.png">
+  <!-- Prevent theme/lang flash: apply stored settings synchronously -->
+  <script>
+    (function(){
+      var t=localStorage.getItem('gb-theme');
+      if(t==='light') document.documentElement.classList.add('light');
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Mobile nav backdrop + drawer -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">✕</button>
+    <a href="index.html" data-i18n="nav_home" class="active">Home</a>
+    <a href="download.html" data-i18n="nav_download">Download</a>
+    <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+    <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+    <div class="mobile-nav-email">
+      <a href="mailto:greenbyte.ukr@gmail.com">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        greenbyte.ukr@gmail.com
+      </a>
+    </div>
+    <div class="mobile-nav-tools">
+      <div class="lang-toggle">
+        <button data-lang="en" class="lang-btn active">EN</button>
+        <button data-lang="uk" class="lang-btn">UA</button>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme"></button>
+    </div>
+  </nav>
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="brand-link">
+        <img src="icons/icon48.png" alt="GreenByte" class="logo">
+      </a>
+      <div class="brand-text">
+        <a href="index.html" class="brand-link">
+          <h1 data-i18n="title">GreenByte</h1>
+        </a>
+        <p class="tagline" data-i18n="tagline">Every byte counts. Make yours green.</p>
+      </div>
+    </div>
+
+    <nav class="site-nav">
+      <a href="index.html" data-i18n="nav_home" class="active">Home</a>
+      <a href="download.html" data-i18n="nav_download">Download</a>
+      <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+      <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-toggle">
+        <button data-lang="en" class="lang-btn active">EN</button>
+        <button data-lang="uk" class="lang-btn">UA</button>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="burger" id="burger" aria-label="Open menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main style="flex:1">
+    <section class="hero">
+      <div class="hero-inner">
+        <h2 data-i18n-html="hero_title">Make your digital life<br><span class="highlight">climate-smart</span></h2>
+        <p class="lead" data-i18n="hero_lead">GreenByte shows the CO₂ behind your browsing, streaming and AI use, then helps you reduce it with challenges, school leaderboards and AI tips.</p>
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <div class="stat-value" id="usersCount">1234</div>
+            <div class="stat-label" data-i18n="stat_users">Active users</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="co2Saved">2560</div>
+            <div class="stat-label" data-i18n="stat_co2">kg CO₂ saved</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="sessions">14820</div>
+            <div class="stat-label" data-i18n="stat_sessions">Sessions tracked</div>
+          </div>
+        </div>
+        <div class="ctas reveal">
+          <a class="btn primary" href="download.html" data-i18n="cta_download">Download App</a>
+          <a class="btn ghost" href="#features" data-i18n="cta_features">See features</a>
+        </div>
+      </div>
+
+      <figure class="mockup reveal">
+        <div class="pc-mockup-wrap">
+          <div class="monitor monitor-main">
+            <div class="monitor-screen" id="mainScreen">
+              <img src="icons/leaderboard.avif" alt="GreenByte Leaderboard" class="screen-img">
+            </div>
+            <div class="monitor-base"></div>
+            <div class="monitor-foot"></div>
+          </div>
+          <div class="monitor monitor-secondary">
+            <div class="monitor-screen" id="secondScreen">
+              <img src="icons/dashboard.avif" alt="GreenByte Dashboard" class="screen-img">
+            </div>
+            <div class="monitor-base"></div>
+            <div class="monitor-foot"></div>
+          </div>
+        </div>
+      </figure>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features reveal">
+      <h3 class="section-heading" data-i18n="features_title">Features</h3>
+      <p class="section-sub" data-i18n="features_sub">Everything you need to understand and reduce your digital carbon footprint.</p>
+
+      <div class="problem-solution">
+        <div class="problem">
+          <h4 data-i18n="problem_title">The problem</h4>
+          <p data-i18n="problem_body">Modern internet use (streaming, cloud AI and large models) has a measurable carbon cost. Individuals rarely see this cost and therefore cannot change behaviour effectively.</p>
+        </div>
+        <div class="solution">
+          <h4 data-i18n="solution_title">Our solution</h4>
+          <p data-i18n="solution_body">GreenByte estimates your digital CO₂ locally, translates it into relatable equivalents, gives AI-driven recommendations, and motivates behaviour change through achievements and leaderboards.</p>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature reveal">
+          <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 12h3v8H3zM10 6h3v14h-3zM17 2h3v18h-3z" fill="currentColor"/></svg></div>
+          <h4 data-i18n="f_realtime">Real‑time tracking</h4>
+          <p data-i18n="f_realtime_desc">Precise, local estimates of CO₂ for browsing, streaming and AI usage; no history leaves your device unless you opt in.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 100 8 4 4 0 000-8zm6 8v6a4 4 0 01-4 4H10a4 4 0 01-4-4v-6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h4 data-i18n="f_ai">AI assistant</h4>
+          <p data-i18n="f_ai_desc">Contextual tips: e.g., switch to audio-only, download playlists, or schedule heavy jobs at low-carbon hours.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.9 6.3L22 9.3l-5 4.2L18.1 22 12 18.8 5.9 22 7 13.5 2 9.3l7.1-1L12 2z" fill="currentColor"/></svg></div>
+          <h4 data-i18n="f_achieve">Achievements & leaderboards</h4>
+          <p data-i18n="f_achieve_desc">Earn badges, compare with classmates, and unlock tasks that reduce your footprint. Both local and global leaderboards supported.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 1a4 4 0 00-4 4v2H6a2 2 0 00-2 2v9a2 2 0 002 2h12a2 2 0 002-2V9a2 2 0 00-2-2h-2V5a4 4 0 00-4-4z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h4 data-i18n="f_privacy">Privacy & control</h4>
+          <p data-i18n="f_privacy_desc">Local-first design. You control uploads. Only aggregated anonymized metrics are shared when enabled.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="achievements reveal" id="achievements">
+      <h3 class="section-heading" data-i18n="ach_title">Achievements & Leaderboards</h3>
+      <p class="section-sub" data-i18n="ach_sub">Gamify your green habits and compete with the world.</p>
+      <div class="ach-grid">
+        <div class="ach-item reveal">
+          <div class="ach-head">
+            <svg width="40" height="40" viewBox="0 0 24 24"><path d="M12 2l2.9 6.3L22 9.3l-5 4.2L18.1 22 12 18.8 5.9 22 7 13.5 2 9.3l7.1-1L12 2z" fill="currentColor"/></svg>
+            <h4 data-i18n="ach_badges_title">Badges</h4>
+          </div>
+          <p data-i18n="ach_badges_desc">Earn themed badges for behaviour: "Low Streamer", "Night Scheduler", "Cloud Minimalist". Badges show on your profile and leaderboard.</p>
+        </div>
+        <div class="ach-item reveal">
+          <div class="ach-head">
+            <svg width="40" height="40" viewBox="0 0 24 24"><path d="M3 3h18v2H3zM6 7h3v13H6zM11 7h3v13h-3zM16 7h3v13h-3z" fill="currentColor"/></svg>
+            <h4 data-i18n="ach_leaderboards_title">Leaderboards</h4>
+          </div>
+          <p data-i18n="ach_leaderboards_desc">Compare weekly and all-time scores with classmates, schools, or globally. Privacy safeguards ensure only aggregated ranks are visible.</p>
+        </div>
+        <div class="ach-item reveal">
+          <div class="ach-head">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="7.5" stroke="currentColor" stroke-width="1" opacity=".35"/><path d="M12 5.5v2M12 16.5v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><text x="12" y="15.8" text-anchor="middle" fill="currentColor" font-size="10" font-weight="800" font-family="Montserrat,sans-serif">G</text></svg>
+            <h4 data-i18n="ach_tokens_title">GreenTokens</h4>
+          </div>
+          <p data-i18n="ach_tokens_desc">Convert saved CO₂ into GreenTokens redeemable for partner actions like tree planting or school projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team-section reveal" id="team">
+      <h3 class="section-heading" data-i18n="team_title">Our Team</h3>
+      <p class="section-sub" data-i18n="team_sub">The people behind GreenByte who make your digital life greener.</p>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-avatar">
+            <img src="icons/team1.avif" alt="Dmytro Fil">
+          </div>
+          <h4 class="team-name" data-i18n="team_name1">Dmytro Fil</h4>
+          <p class="team-role" data-i18n="team_role1">Project Lead & Architect</p>
+          <p class="team-bio" data-i18n="team_bio1">Leader and main developer of GreenByte. Responsible for the overall concept, development and technical architecture.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar">
+            <img src="icons/team2.avif" alt="Nikita Lytvyn">
+          </div>
+          <h4 class="team-name" data-i18n="team_name2">Nikita Lytvyn</h4>
+          <p class="team-role" data-i18n="team_role2">Software Developer</p>
+          <p class="team-bio" data-i18n="team_bio2">Developer of GreenByte's technical components. Responsible for the browser extension and platform integration.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar">
+            <img src="icons/team3.avif" alt="Daniil Hantsura">
+          </div>
+          <h4 class="team-name" data-i18n="team_name3">Daniil Hantsura</h4>
+          <p class="team-role" data-i18n="team_role3">UI/UX & Media Specialist</p>
+          <p class="team-bio" data-i18n="team_bio3">Responsible for the visual identity and presentation of GreenByte. Creates media materials, presentations and video demos.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="contact-wave contact-wave-top" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path d="M0,20 C240,44 480,4 720,22 C960,40 1200,8 1440,26 L1440,48 L0,48 Z" fill="var(--surface)"/>
+      </svg>
+    </div>
+
+    <!-- Contact section -->
+    <section class="contact-section" id="contact">
+      <div class="contact-wrapper reveal">
+        <div class="contact-box">
+          <div class="contact-box-header" id="contactBoxHeader">
+            <h3 data-i18n="contact_title">Get in touch</h3>
+            <p class="lead" data-i18n="contact_sub">Questions about school rollout, team dashboards, or partnerships? We reply within 24 hours.</p>
+          </div>
+
+          <div class="contact-form-wrap" id="contactFormWrap">
+          <form id="contactForm" class="contact-form" action="https://formsubmit.co/greenbyte.ukr@gmail.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="GreenByte website contact">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="form-honey">
+            <div class="form-group">
+              <label data-i18n="contact_name">Your name</label>
+              <input type="text" name="name" data-i18n="contact_name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label data-i18n="contact_email">Email address</label>
+              <input type="email" name="email" data-i18n="contact_email" placeholder="Email address" required>
+            </div>
+            <div class="form-group full">
+              <label data-i18n="contact_subject">Subject</label>
+              <select id="contactSubject" name="subject" required>
+                <option value="1">General question</option>
+                <option value="2">School deployment</option>
+                <option value="3">School analytics</option>
+                <option value="4">Bug report</option>
+                <option value="5">Partnership</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label data-i18n="contact_message">Message</label>
+              <textarea name="message" data-i18n="contact_message" placeholder="Message" required></textarea>
+            </div>
+
+            <!-- Captcha -->
+            <div class="captcha-row locked" id="captchaRow">
+              <div class="captcha-hint" id="captchaHint" data-i18n="contact_captcha_hint">Fill in the form to unlock verification.</div>
+              <div class="captcha-box">
+                <div class="captcha-check" id="captchaCheck" role="checkbox" aria-checked="false"></div>
+                <span class="captcha-label" data-i18n="contact_not_robot">I'm not a robot</span>
+                <span class="captcha-logo" data-i18n-html="contact_captcha_brand">reCAPTCHA<br>Privacy · Terms</span>
+              </div>
+            </div>
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn primary" data-i18n="contact_send">Send message</button>
+            </div>
+          </form>
+          </div>
+
+          <div class="form-success-panel" id="formSuccessPanel" aria-live="polite" hidden>
+            <div class="success-ring">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none"><path d="M6 12l4 4 8-8" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h4 data-i18n="contact_success_title">Message sent!</h4>
+            <p data-i18n="contact_success">We will get back to you within 24 hours.</p>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <div class="info-card">
+            <div class="info-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="info-card-body">
+            <h4 data-i18n="contact_info_email">Email</h4>
+            <p><a href="mailto:greenbyte.ukr@gmail.com">greenbyte.ukr@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm0 20a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm0-17a1 1 0 0 0-1 1v4l3.3 1.9a1 1 0 1 0 1.1-1.6l-3.4-2V5a1 1 0 0 0-1-1z" fill="currentColor"/></svg>
+            </div>
+            <div class="info-card-body">
+            <h4 data-i18n="contact_info_response">Response Time</h4>
+            <p data-i18n-html="contact_info_response_desc">Within 24 hours<br>Monday to Friday</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></svg>
+            </div>
+            <div class="info-card-body">
+            <h4 data-i18n="contact_info_support">Support</h4>
+            <p data-i18n-html="contact_info_support_desc">Technical support &<br>partnerships available</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="contact-wave contact-wave-bottom" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <rect width="1440" height="100" fill="var(--surface)"/>
+        <path d="M0,34 C248,84 438,22 662,48 C872,72 1038,116 1440,42 L1440,100 L0,100 Z" fill="var(--bg)"/>
+      </svg>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="icons/icon48.png" alt="">
+      GreenByte © 2026
+    </div>
+    <div class="footer-links">
+      <a href="download.html" data-i18n="nav_download">Download</a>
+      <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+      <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

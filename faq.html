@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <title>FAQ | GreenByte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icons/logo.png">
+  <!-- Prevent theme/lang flash: apply stored settings synchronously -->
+  <script>
+    (function(){
+      var t=localStorage.getItem('gb-theme');
+      if(t==='light') document.documentElement.classList.add('light');
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="download.html" data-i18n="nav_download">Download</a>
+    <a href="faq.html" data-i18n="nav_faq" class="active">FAQ</a>
+    <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+    <div class="mobile-nav-email">
+      <a href="mailto:greenbyte.ukr@gmail.com">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        greenbyte.ukr@gmail.com
+      </a>
+    </div>
+    <div class="mobile-nav-tools">
+      <div class="lang-toggle">
+        <button data-lang="en" class="lang-btn active">EN</button>
+        <button data-lang="uk" class="lang-btn">UA</button>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme"></button>
+    </div>
+  </nav>
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="brand-link"><img src="icons/icon48.png" alt="GreenByte" class="logo"></a>
+      <div class="brand-text">
+        <a href="index.html" class="brand-link"><h1 data-i18n="title">GreenByte</h1></a>
+        <p class="tagline" data-i18n="tagline">Every byte counts. Make yours green.</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="download.html" data-i18n="nav_download">Download</a>
+      <a href="faq.html" data-i18n="nav_faq" class="active">FAQ</a>
+      <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle">
+        <button data-lang="en" class="lang-btn active">EN</button>
+        <button data-lang="uk" class="lang-btn">UA</button>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="burger" id="burger" aria-label="Open menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero reveal">
+      <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
+      <p class="lead" data-i18n="faq_sub">Answers to quickly understand features, privacy and installation.</p>
+    </div>
+
+    <div class="accordion" style="padding-bottom:60px">
+
+      <button class="accordion-button" aria-expanded="false">
+        <span class="acc-index">1</span>
+        <span class="acc-title" data-i18n="q_measure">What does GreenByte measure?</span>
+        <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <p data-i18n="a_measure">GreenByte estimates CO₂ from network activity, streaming, storage and AI calls using public emission factors and local heuristics. Calculations run on your device unless you enable sharing.</p>
+      </div>
+
+      <button class="accordion-button" aria-expanded="false">
+        <span class="acc-index">2</span>
+        <span class="acc-title" data-i18n="q_data">Is my data shared?</span>
+        <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <p data-i18n="a_data">No. By default no page content or raw history leaves your device. Leaderboards only receive anonymized aggregates if you opt in.</p>
+      </div>
+
+      <button class="accordion-button" aria-expanded="false">
+        <span class="acc-index">3</span>
+        <span class="acc-title" data-i18n="q_school_use">Can schools or teams use GreenByte?</span>
+        <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <p data-i18n="a_school_use">Yes. GreenByte can be used by classes, clubs, schools, or city teams. Shared dashboards show only aggregated progress, so students can compare impact without exposing private browsing details.</p>
+      </div>
+
+      <button class="accordion-button" aria-expanded="false">
+        <span class="acc-index">4</span>
+        <span class="acc-title" data-i18n="q_accuracy">How accurate are the CO₂ estimates?</span>
+        <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <p data-i18n="a_accuracy">Estimates use best-available emission factors and are intended for behavioural change (relative comparisons), not formal accounting.</p>
+      </div>
+
+      <button class="accordion-button" aria-expanded="false">
+        <span class="acc-index">5</span>
+        <span class="acc-title" data-i18n="q_tokens">What are GreenTokens and achievements?</span>
+        <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <p data-i18n="a_tokens">GreenTokens reward verified reductions and can be used with partner projects (tree planting, school initiatives). Achievements recognise consistent behaviour change.</p>
+      </div>
+
+      <button class="accordion-button" aria-expanded="false">
+        <span class="acc-index">6</span>
+        <span class="acc-title" data-i18n="q_platforms">Which platforms are supported?</span>
+        <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <p data-i18n="a_platforms">GreenByte offers a Windows desktop installer and a browser extension (Chrome/Edge). macOS and Linux builds are available on request or via the ZIP packages.</p>
+      </div>
+
+      <button class="accordion-button" aria-expanded="false">
+        <span class="acc-index">7</span>
+        <span class="acc-title" data-i18n="q_content">Does the app aggregate my browsing content?</span>
+        <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <p data-i18n="a_content">No. We collect counts and content-type labels (video/audio/image) for estimation, not page text or user inputs.</p>
+      </div>
+
+      <button class="accordion-button" aria-expanded="false">
+        <span class="acc-index">8</span>
+        <span class="acc-title" data-i18n="q_leaderboards">How do leaderboards protect privacy?</span>
+        <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <p data-i18n="a_leaderboards">Leaderboards use anonymized aggregates and display ranks only after data is binned; you can opt out or limit visibility to school-only groups.</p>
+      </div>
+
+      <button class="accordion-button" aria-expanded="false">
+        <span class="acc-index">9</span>
+        <span class="acc-title" data-i18n="q_export">Can I export or delete my data?</span>
+        <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <p data-i18n="a_export">You can export local logs and request deletion of server-side aggregates. Contact the team for immediate assistance.</p>
+      </div>
+
+      <button class="accordion-button" aria-expanded="false">
+        <span class="acc-index">10</span>
+        <span class="acc-title" data-i18n="q_contact">Who do I contact for school deployment?</span>
+        <svg class="acc-chevron" width="16" height="16" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="accordion-panel">
+        <p data-i18n-html="a_contact">Contact the team at <a href="mailto:greenbyte.ukr@gmail.com" style="color:var(--accent)">greenbyte.ukr@gmail.com</a> for school rollout, dashboards, or partnership ideas.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="icons/icon48.png" alt="">
+      GreenByte © 2026
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+      <a href="download.html" data-i18n="nav_download">Download</a>
+      <a href="index.html" data-i18n="nav_home">Home</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <title>Download | GreenByte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icons/logo.png">
+  <!-- Prevent theme/lang flash: apply stored settings synchronously -->
+  <script>
+    (function(){
+      var t=localStorage.getItem('gb-theme');
+      if(t==='light') document.documentElement.classList.add('light');
+    })();
+  </script>
+</head>
+<body>
+
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop" aria-hidden="true"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="download.html" data-i18n="nav_download" class="active">Download</a>
+    <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+    <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+    <div class="mobile-nav-email">
+      <a href="mailto:greenbyte.ukr@gmail.com">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        greenbyte.ukr@gmail.com
+      </a>
+    </div>
+    <div class="mobile-nav-tools">
+      <div class="lang-toggle">
+        <button data-lang="en" class="lang-btn active">EN</button>
+        <button data-lang="uk" class="lang-btn">UA</button>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme"></button>
+    </div>
+  </nav>
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="brand-link"><img src="icons/icon48.png" alt="GreenByte" class="logo"></a>
+      <div class="brand-text">
+        <a href="index.html" class="brand-link"><h1 data-i18n="title">GreenByte</h1></a>
+        <p class="tagline" data-i18n="tagline">Every byte counts. Make yours green.</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="download.html" data-i18n="nav_download" class="active">Download</a>
+      <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+      <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle">
+        <button data-lang="en" class="lang-btn active">EN</button>
+        <button data-lang="uk" class="lang-btn">UA</button>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="burger" id="burger" aria-label="Open menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page hero -->
+    <div class="page-hero download-hero reveal">
+      <div class="download-hero-content">
+        <img src="icons/icon128.png" alt="GreenByte" class="page-hero-icon">
+        <div class="download-hero-copy">
+          <h2 data-i18n="download_title">Download GreenByte</h2>
+          <p class="lead" data-i18n="download_lead">Choose how to try GreenByte: a Windows desktop app or a lightweight Chrome/Edge extension.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download cards -->
+    <div class="downloads-grid">
+
+      <!-- Desktop -->
+      <div class="download-card reveal">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+          <div class="download-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 3h18v13H3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 21h8M12 16v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3 data-i18n="d_desktop">Desktop app (Windows)</h3>
+          <span class="download-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h11.377v11.372H0zm12.623 0H24v11.372H12.623zM0 12.623h11.377V24H0zm12.623 0H24V24H12.623z"/></svg>
+            Windows
+          </span>
+        </div>
+        <p data-i18n="d_desktop_desc">Full dashboard, personal stats, AI assistant and leaderboards. Data stays local unless you opt in.</p>
+
+        <div class="download-preview">
+          <img src="icons/main-page.avif" alt="GreenByte Desktop App" style="width:100%;border-radius:10px;display:block">
+        </div>
+
+        <div class="download-actions">
+          <a id="primaryDownload" class="btn primary" href="releases/GreenByte-Setup.exe" download>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 16l-4-4h3V4h2v8h3l-4 4zM4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="d_button_exe">Download .exe</span>
+          </a>
+          <a class="btn secondary" href="releases/GreenByte-Portable.zip" download>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 8h14M5 8a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v0a2 2 0 01-2 2M5 8l1 10a2 2 0 002 2h8a2 2 0 002-2L19 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span data-i18n="d_button_zip">.zip portable</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Extension -->
+      <div class="download-card reveal" style="animation-delay:.1s">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+          <div class="download-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 data-i18n="d_extension">Browser extension</h3>
+          <span class="download-badge" style="background:rgba(59,130,246,.1);color:#3b82f6;border-color:rgba(59,130,246,.2)">Chrome / Edge</span>
+        </div>
+        <p data-i18n="d_extension_desc">Lightweight helper that surfaces CO₂ while you browse. Pairs with the desktop app for full features.</p>
+
+        <div style="display:flex;flex-direction:column;gap:8px;margin:4px 0;flex:1">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-text" data-i18n-html="d_step1">Go to the <strong>Chrome Web Store</strong> <span class="nowrap-inline">(or <strong>Edge Add-ons</strong>)</span></div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-text" data-i18n-html="d_step2">Search for <strong>GreenByte</strong> and click <strong>Add to browser</strong></div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-text" data-i18n-html="d_step3">Pin the extension and start tracking your <strong>digital CO₂</strong></div>
+          </div>
+        </div>
+
+        <div class="download-actions">
+          <a class="btn primary" href="https://chromewebstore.google.com/" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="d_button_ext">Chrome Web Store</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="icons/icon48.png" alt="">
+      GreenByte © 2026
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
+      <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+      <a href="index.html" data-i18n="nav_home">Home</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
