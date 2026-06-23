@@ -491,8 +491,27 @@
       }, 360);
     }
 
+    const RATE_LIMIT_MS = 3 * 60 * 1000;
+
     form.addEventListener('submit', async e => {
       e.preventDefault();
+
+      const lastSent = parseInt(localStorage.getItem('gb-form-ts') || '0', 10);
+      const remaining = RATE_LIMIT_MS - (Date.now() - lastSent);
+      if (remaining > 0) {
+        const mins = Math.ceil(remaining / 60000);
+        const lang = localStorage.getItem('gb-lang') || 'en';
+        captchaHint.textContent = lang === 'uk'
+          ? `Зачекайте ${mins} хв перед повторним надсиланням`
+          : `Please wait ${mins} min before sending again`;
+        captchaHint?.classList.add('warn');
+        setTimeout(() => {
+          captchaHint?.classList.remove('warn');
+          captchaHint.textContent = T[lang].contact_captcha_hint;
+        }, 3000);
+        return;
+      }
+
       if (!setCaptchaState()) {
         captchaHint?.classList.add('warn');
         setTimeout(() => captchaHint?.classList.remove('warn'), 1500);
@@ -517,6 +536,7 @@
           headers: { Accept: 'application/json' }
         });
         if (!response.ok) throw new Error('submit failed');
+        localStorage.setItem('gb-form-ts', String(Date.now()));
         showSuccessPanel();
         setTimeout(hideSuccessPanel, 4200);
       } catch {

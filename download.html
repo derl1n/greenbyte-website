@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <title>Download | GreenByte</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -84,7 +84,7 @@
 
       <!-- Desktop -->
       <div class="download-card reveal">
-        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:nowrap">
           <div class="download-card-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 3h18v13H3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 21h8M12 16v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
@@ -114,7 +114,7 @@
 
       <!-- Extension -->
       <div class="download-card reveal" style="animation-delay:.1s">
-        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:nowrap">
           <div class="download-card-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
@@ -154,9 +154,10 @@
       GreenByte © 2026
     </div>
     <div class="footer-links">
-      <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
-      <a href="faq.html" data-i18n="nav_faq">FAQ</a>
       <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="download.html" data-i18n="nav_download" class="active">Download</a>
+      <a href="faq.html" data-i18n="nav_faq">FAQ</a>
+      <a href="privacy.html" data-i18n="nav_privacy">Privacy</a>
     </div>
   </footer>
 
