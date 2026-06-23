@@ -548,9 +548,10 @@
 
   function markActiveNav() {
     const raw = location.pathname.split('/').pop();
-    const path = (!raw || raw === '/') ? 'index.html' : raw;
+    const page = (!raw || raw === '/') ? 'index' : raw.replace('.html', '');
     document.querySelectorAll('.site-nav a, .mobile-nav a, .footer-links a').forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === path);
+      const href = (a.getAttribute('href') || '').replace('.html', '');
+      a.classList.toggle('active', href === page);
     });
   }
 
