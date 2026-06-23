@@ -1,15 +1,11 @@
-// GreenByte — script.js v2
 (function () {
 
-  /* ── Apply theme & lang SYNCHRONOUSLY (no flash on load) ── */
-  /* These run before DOMContentLoaded so there's no flicker   */
   (function applyStoredTheme() {
     if (localStorage.getItem('gb-theme') === 'light') {
       document.documentElement.classList.add('light');
     }
   })();
 
-  /* ── i18n strings ── */
   const T = {
     en: {
       title: 'GreenByte', tagline: 'Every byte counts. Make yours green.',
@@ -70,7 +66,6 @@
       privacy_programs_desc: 'For school programs, clubs, or competitions, GreenByte can provide grouped dashboards, class challenges, and exportable summary reports. Individual browsing details stay private.',
       privacy_questions_title: 'Have questions?',
       privacy_questions_desc: 'For school rollout, team dashboards, partnership ideas, or any privacy questions, reach out to the GreenByte team. We respond within 24 hours.',
-      /* contact form */
       contact_title: 'Get in touch',
       contact_sub: 'Questions about school rollout, team dashboards, or partnerships? We reply within 24 hours.',
       contact_name: 'Your name',
@@ -262,12 +257,10 @@
     }
   };
 
-  /* ── Apply language ── */
   function applyLang(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (T[lang] && T[lang][key] !== undefined) {
-        // for inputs use placeholder, for select options rebuild
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
           el.placeholder = T[lang][key];
         } else if (el.tagName === 'BUTTON' || el.tagName === 'A') {
@@ -283,7 +276,6 @@
         el.innerHTML = T[lang][key];
       }
     });
-    // Rebuild select options if present
     const sel = document.getElementById('contactSubject');
     if (sel) {
       const opts = ['opt1','opt2','opt3','opt4','opt5'];
@@ -294,7 +286,6 @@
     document.documentElement.lang = lang;
   }
 
-  /* ── Theme ── */
   const sunSVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
   const moonSVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
@@ -307,10 +298,8 @@
     localStorage.setItem('gb-theme', isLight ? 'light' : 'dark');
     setThemeIcons(isLight);
   }
-  // No need to re-apply — already done synchronously above
   document.querySelectorAll('.theme-toggle').forEach(b => b.addEventListener('click', toggleTheme));
 
-  /* ── Lang toggle ── */
   function setLangButtons(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
   }
@@ -328,7 +317,6 @@
     });
   }
 
-  /* ── Burger menu ── */
   function initBurger() {
     const burger = document.getElementById('burger');
     const mobileNav = document.getElementById('mobileNav');
@@ -372,7 +360,6 @@
     mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileNav));
   }
 
-  /* ── Stats counter ── */
   function animateStats() {
     document.querySelectorAll('.stat-value').forEach(el => {
       const raw = el.textContent.replace(/[^0-9]/g, '');
@@ -394,7 +381,6 @@
     });
   }
 
-  /* ── FAQ accordion ── */
   function initAccordion() {
     document.querySelectorAll('.accordion-button').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -407,7 +393,6 @@
     });
   }
 
-  /* ── Contact form ── */
   function initContactForm() {
     const form = document.getElementById('contactForm');
     if (!form) return;
@@ -552,7 +537,6 @@
     });
   }
 
-  /* ── Reveal on scroll ── */
   function initReveal() {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
@@ -562,10 +546,10 @@
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   }
 
-  /* ── Active nav ── */
   function markActiveNav() {
-    const path = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.site-nav a, .mobile-nav a').forEach(a => {
+    const raw = location.pathname.split('/').pop();
+    const path = (!raw || raw === '/') ? 'index.html' : raw;
+    document.querySelectorAll('.site-nav a, .mobile-nav a, .footer-links a').forEach(a => {
       a.classList.toggle('active', a.getAttribute('href') === path);
     });
   }
@@ -601,7 +585,6 @@
     }, { passive: true });
   }
 
-  /* ── Init ── */
   document.addEventListener('DOMContentLoaded', () => {
     const isLight = document.documentElement.classList.contains('light');
     setThemeIcons(isLight); // set correct icon after DOM ready
