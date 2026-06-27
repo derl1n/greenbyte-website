@@ -603,8 +603,9 @@
   }
 
   function markActiveNav() {
-    const raw = location.pathname.split('/').pop();
-    const page = (!raw || raw === '/') ? 'index' : raw.replace('.html', '');
+    const path = location.pathname.replace(/\/+$/, '');
+    const seg = path.split('/').pop() || '';
+    const page = (!seg) ? 'index' : seg.replace('.html', '');
     document.querySelectorAll('.site-nav a, .mobile-nav a, .footer-links a').forEach(a => {
       const href = (a.getAttribute('href') || '').replace('.html', '');
       a.classList.toggle('active', href === page);
