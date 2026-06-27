@@ -296,16 +296,16 @@
         uk: { title: 'GreenByte | Цифровий трекер вуглецю', desc: 'GreenByte відстежує ваш цифровий вуглецевий слід у реальному часі – CO₂ від перегляду, стрімів та AI, бейджі й рейтинги.' }
       },
       download: {
-        en: { title: 'Download | GreenByte', desc: 'Download GreenByte for Windows or install the Chrome/Edge browser extension to start tracking your digital carbon footprint today.' },
-        uk: { title: 'Завантажити | GreenByte', desc: 'Завантажте GreenByte для Windows або встановіть розширення для Chrome/Edge, щоб почати відстежувати свій цифровий вуглецевий слід.' }
+        en: { title: 'Download GreenByte – Digital Carbon Tracker', desc: 'Download GreenByte for Windows or install the Chrome/Edge browser extension to start tracking your digital carbon footprint today.' },
+        uk: { title: 'Завантажити GreenByte – Трекер вуглецевого сліду', desc: 'Завантажте GreenByte для Windows або встановіть розширення для Chrome/Edge, щоб почати відстежувати свій цифровий вуглецевий слід.' }
       },
       faq: {
-        en: { title: 'FAQ | GreenByte', desc: 'Frequently asked questions about GreenByte – learn how CO₂ tracking works, what data stays local, school programs, GreenTokens and supported platforms.' },
-        uk: { title: 'FAQ | GreenByte', desc: 'Часті запитання про GreenByte – як працює відстеження CO₂, які дані залишаються локально, шкільні програми, GreenTokens та підтримувані платформи.' }
+        en: { title: 'FAQ – GreenByte Digital Carbon Tracker', desc: 'Frequently asked questions about GreenByte – learn how CO₂ tracking works, what data stays local, school programs, GreenTokens and supported platforms.' },
+        uk: { title: 'FAQ – GreenByte Цифровий трекер вуглецю', desc: 'Часті запитання про GreenByte – як працює відстеження CO₂, які дані залишаються локально, шкільні програми, GreenTokens та підтримувані платформи.' }
       },
       privacy: {
         en: { title: 'Privacy & Security | GreenByte', desc: 'Learn how GreenByte protects your privacy – local-first CO₂ tracking, anonymized leaderboards, data retention policies and security practices.' },
-        uk: { title: 'Конфіденційність | GreenByte', desc: 'Дізнайтеся, як GreenByte захищає вашу конфіденційність – локальне відстеження CO₂, анонімізовані рейтинги, політика зберігання даних та безпека.' }
+        uk: { title: 'Конфіденційність та безпека | GreenByte', desc: 'Дізнайтеся, як GreenByte захищає вашу конфіденційність – локальне відстеження CO₂, анонімізовані рейтинги, політика зберігання даних та безпека.' }
       }
     };
     const seo = (seoData[page] || seoData.index)[lang] || (seoData[page] || seoData.index).en;
