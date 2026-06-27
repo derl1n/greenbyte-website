@@ -604,11 +604,11 @@
 
   function markActiveNav() {
     const path = location.pathname.replace(/\/+$/, '');
-    const seg = path.split('/').pop() || '';
-    const page = (!seg) ? 'index' : seg.replace('.html', '');
+    const page = path.split('/').pop().replace('.html', '') || 'index';
     document.querySelectorAll('.site-nav a, .mobile-nav a, .footer-links a').forEach(a => {
-      const href = (a.getAttribute('href') || '').replace('.html', '');
-      a.classList.toggle('active', href === page);
+      const raw = (a.getAttribute('href') || '').split('?')[0].replace(/\/+$/, '');
+      const link = raw.split('/').pop().replace('.html', '') || 'index';
+      a.classList.toggle('active', link === page);
     });
   }
 
