@@ -4,11 +4,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <title>GreenByte | Digital Carbon Tracker</title>
-  <meta name="description" content="GreenByte makes your digital carbon footprint visible and actionable.">
+  <meta name="description" content="GreenByte tracks your digital carbon footprint in real time — monitor CO₂ from browsing, streaming and AI, earn badges and compete on leaderboards.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://greenbyte.live/">
+  <link rel="alternate" hreflang="en" href="https://greenbyte.live/">
+  <link rel="alternate" hreflang="uk" href="https://greenbyte.live/?lang=uk">
+  <link rel="alternate" hreflang="x-default" href="https://greenbyte.live/">
+  <meta property="og:title" content="GreenByte | Digital Carbon Tracker">
+  <meta property="og:description" content="GreenByte tracks your digital carbon footprint in real time — monitor CO₂ from browsing, streaming and AI, earn badges and compete on leaderboards.">
+  <meta property="og:image" content="https://greenbyte.live/icons/icon128.png">
+  <meta property="og:url" content="https://greenbyte.live/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GreenByte">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GreenByte | Digital Carbon Tracker">
+  <meta name="twitter:description" content="GreenByte tracks your digital carbon footprint in real time — monitor CO₂ from browsing, streaming and AI, earn badges and compete on leaderboards.">
+  <meta name="twitter:image" content="https://greenbyte.live/icons/icon128.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <meta name="theme-color" content="#0b1020">
   <link rel="icon" type="image/png" href="icons/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://greenbyte.live/",
+    "name": "GreenByte",
+    "description": "Digital carbon footprint tracker with real-time monitoring, AI tips, achievements and leaderboards.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "GreenByte",
+      "url": "https://greenbyte.live/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://greenbyte.live/icons/icon128.png"
+      }
+    }
+  }
+  </script>
   <script>
     (function(){
       var t=localStorage.getItem('gb-theme');
@@ -47,7 +80,7 @@
       </a>
       <div class="brand-text">
         <a href="index.html" class="brand-link">
-          <h1 data-i18n="title">GreenByte</h1>
+          <span class="brand-title" data-i18n="title">GreenByte</span>
         </a>
         <p class="tagline" data-i18n="tagline">Every byte counts. Make yours green.</p>
       </div>
@@ -77,7 +110,7 @@
   <main style="flex:1">
     <section class="hero">
       <div class="hero-inner">
-        <h2 data-i18n-html="hero_title">Make your digital life<br><span class="highlight">climate-smart</span></h2>
+        <h1 class="hero-title" data-i18n-html="hero_title">Make your digital life<br><span class="highlight">climate-smart</span></h1>
         <p class="lead" data-i18n="hero_lead">GreenByte shows the CO₂ behind your browsing, streaming and AI use, then helps you reduce it with challenges, school leaderboards and AI tips.</p>
         <div class="hero-stats reveal">
           <div class="stat">
@@ -120,7 +153,7 @@
     </section>
 
     <section id="features" class="features reveal">
-      <h3 class="section-heading" data-i18n="features_title">Features</h3>
+      <h2 class="section-heading" data-i18n="features_title">Features</h2>
       <p class="section-sub" data-i18n="features_sub">Everything you need to understand and reduce your digital carbon footprint.</p>
 
       <div class="problem-solution">
@@ -159,7 +192,7 @@
     </section>
 
     <section class="achievements reveal" id="achievements">
-      <h3 class="section-heading" data-i18n="ach_title">Achievements & Leaderboards</h3>
+      <h2 class="section-heading" data-i18n="ach_title">Achievements & Leaderboards</h2>
       <p class="section-sub" data-i18n="ach_sub">Gamify your green habits and compete with the world.</p>
       <div class="ach-grid">
         <div class="ach-item reveal">
@@ -187,7 +220,7 @@
     </section>
 
     <section class="team-section reveal" id="team">
-      <h3 class="section-heading" data-i18n="team_title">Our Team</h3>
+      <h2 class="section-heading" data-i18n="team_title">Our Team</h2>
       <p class="section-sub" data-i18n="team_sub">The people behind GreenByte who make your digital life greener.</p>
       <div class="team-grid">
         <div class="team-card reveal">
@@ -227,7 +260,7 @@
       <div class="contact-wrapper reveal">
         <div class="contact-box">
           <div class="contact-box-header" id="contactBoxHeader">
-            <h3 data-i18n="contact_title">Get in touch</h3>
+            <h2 data-i18n="contact_title">Get in touch</h2>
             <p class="lead" data-i18n="contact_sub">Questions about school rollout, team dashboards, or partnerships? We reply within 24 hours.</p>
           </div>
 
@@ -328,7 +361,7 @@
 
   <footer class="site-footer">
     <div class="footer-brand">
-      <img src="icons/icon48.png" alt="">
+      <img src="icons/icon48.png" alt="GreenByte">
       GreenByte © 2026
     </div>
     <div class="footer-links">

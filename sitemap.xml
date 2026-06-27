@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://greenbyte.live/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://greenbyte.live/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://greenbyte.live/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://greenbyte.live/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://greenbyte.live/?lang=uk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://greenbyte.live/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://greenbyte.live/?lang=uk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://greenbyte.live/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://greenbyte.live/download</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://greenbyte.live/download"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://greenbyte.live/download?lang=uk"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenbyte.live/download?lang=uk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://greenbyte.live/download"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://greenbyte.live/download?lang=uk"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://greenbyte.live/faq</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://greenbyte.live/faq"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://greenbyte.live/faq?lang=uk"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenbyte.live/faq?lang=uk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://greenbyte.live/faq"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://greenbyte.live/faq?lang=uk"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://greenbyte.live/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://greenbyte.live/privacy"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://greenbyte.live/privacy?lang=uk"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://greenbyte.live/privacy?lang=uk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://greenbyte.live/privacy"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://greenbyte.live/privacy?lang=uk"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
