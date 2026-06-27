@@ -10,7 +10,7 @@
     en: {
       title: 'GreenByte', tagline: 'Every byte counts. Make yours green.',
       nav_home: 'Home', nav_features: 'Features', nav_achievements: 'Achievements', nav_team: 'Team', nav_contact: 'Contact', nav_download: 'Download', nav_faq: 'FAQ', nav_privacy: 'Privacy',
-      hero_title: 'Make your digital life<br><span class="highlight">climate-smart</span>',
+      hero_title: 'Make your digital life <br><span class="highlight">climate-smart</span>',
       hero_lead: 'GreenByte shows the CO₂ behind your browsing, streaming and AI use, then helps you reduce it with challenges, school leaderboards and AI tips.',
       problem_title: 'The problem',
       problem_body: 'Modern internet use (streaming, cloud AI and large models) has a measurable carbon cost. Individuals rarely see this cost and therefore cannot change behaviour effectively.',
@@ -134,7 +134,7 @@
     uk: {
       title: 'GreenByte', tagline: 'Кожен байт має значення. Зроби свій зеленим.',
       nav_home: 'Головна', nav_features: 'Функції', nav_achievements: 'Досягнення', nav_team: 'Команда', nav_contact: 'Контакти', nav_download: 'Завантажити', nav_faq: 'FAQ', nav_privacy: 'Конфіденційність',
-      hero_title: 'Цифрове життя,<br><span class="highlight">розумне для клімату</span>',
+      hero_title: 'Цифрове життя, <br><span class="highlight">розумне для клімату</span>',
       hero_lead: 'GreenByte показує CO₂ за вашим переглядом, стрімами та AI і допомагає зменшувати це через челенджі, рейтинги шкіл та AI-поради.',
       problem_title: 'Проблема',
       problem_body: 'Сучасне використання інтернету (стрімінг, хмарний AI і великі моделі) має вимірювану вуглецеву вартість. Люди рідко бачать цю вартість і не можуть ефективно змінити поведінку.',
@@ -292,20 +292,20 @@
     const page = location.pathname.split('/').pop().replace('.html','') || 'index';
     const seoData = {
       index: {
-        en: { title: 'GreenByte | Digital Carbon Tracker', desc: 'GreenByte tracks your digital carbon footprint in real time — monitor CO₂ from browsing, streaming and AI, earn badges and compete on leaderboards.' },
-        uk: { title: 'GreenByte | Цифровий трекер вуглецю', desc: 'GreenByte відстежує ваш цифровий вуглецевий слід у реальному часі — CO₂ від перегляду, стрімів та AI, бейджі, рейтинги та AI-поради.' }
+        en: { title: 'GreenByte | Digital Carbon Tracker', desc: 'GreenByte tracks your digital carbon footprint in real time – monitor CO₂ from browsing, streaming, AI hours, earn badges and compete on leaderboards.' },
+        uk: { title: 'GreenByte | Цифровий трекер вуглецю', desc: 'GreenByte відстежує ваш цифровий вуглецевий слід у реальному часі – CO₂ від перегляду, стрімів та AI, бейджі й рейтинги.' }
       },
       download: {
         en: { title: 'Download | GreenByte', desc: 'Download GreenByte for Windows or install the Chrome/Edge browser extension to start tracking your digital carbon footprint today.' },
         uk: { title: 'Завантажити | GreenByte', desc: 'Завантажте GreenByte для Windows або встановіть розширення для Chrome/Edge, щоб почати відстежувати свій цифровий вуглецевий слід.' }
       },
       faq: {
-        en: { title: 'FAQ | GreenByte', desc: 'Frequently asked questions about GreenByte — learn how CO₂ tracking works, what data stays local, school programs, GreenTokens and supported platforms.' },
-        uk: { title: 'FAQ | GreenByte', desc: 'Часті запитання про GreenByte — як працює відстеження CO₂, які дані залишаються локально, шкільні програми, GreenTokens та підтримувані платформи.' }
+        en: { title: 'FAQ | GreenByte', desc: 'Frequently asked questions about GreenByte – learn how CO₂ tracking works, what data stays local, school programs, GreenTokens and supported platforms.' },
+        uk: { title: 'FAQ | GreenByte', desc: 'Часті запитання про GreenByte – як працює відстеження CO₂, які дані залишаються локально, шкільні програми, GreenTokens та підтримувані платформи.' }
       },
       privacy: {
-        en: { title: 'Privacy & Security | GreenByte', desc: 'Learn how GreenByte protects your privacy — local-first CO₂ tracking, anonymized leaderboards, data retention policies and security practices.' },
-        uk: { title: 'Конфіденційність | GreenByte', desc: 'Дізнайтеся, як GreenByte захищає вашу конфіденційність — локальне відстеження CO₂, анонімізовані рейтинги, політика зберігання даних та безпека.' }
+        en: { title: 'Privacy & Security | GreenByte', desc: 'Learn how GreenByte protects your privacy – local-first CO₂ tracking, anonymized leaderboards, data retention policies and security practices.' },
+        uk: { title: 'Конфіденційність | GreenByte', desc: 'Дізнайтеся, як GreenByte захищає вашу конфіденційність – локальне відстеження CO₂, анонімізовані рейтинги, політика зберігання даних та безпека.' }
       }
     };
     const seo = (seoData[page] || seoData.index)[lang] || (seoData[page] || seoData.index).en;
@@ -315,6 +315,11 @@
     if (ogTitle) ogTitle.content = seo.title;
     if (twTitle) twTitle.content = seo.title;
     document.title = seo.title;
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      const base = canonical.href.split('?')[0];
+      canonical.href = lang === 'uk' ? base + '?lang=uk' : base;
+    }
   }
 
   const sunSVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
@@ -341,7 +346,11 @@
 
   function setLangURL(lang) {
     const url = new URL(location.href);
-    url.searchParams.set('lang', lang);
+    if (lang === 'uk') {
+      url.searchParams.set('lang', 'uk');
+    } else {
+      url.searchParams.delete('lang');
+    }
     history.replaceState(null, '', url.toString());
     document.documentElement.lang = lang === 'uk' ? 'uk' : 'en';
   }
