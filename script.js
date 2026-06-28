@@ -9,7 +9,7 @@
   const T = {
     en: {
       title: 'GreenByte', tagline: 'Every byte counts. Make yours green.',
-      nav_home: 'Home', nav_features: 'Features', nav_achievements: 'Achievements', nav_team: 'Team', nav_contact: 'Contact', nav_download: 'Download', nav_faq: 'FAQ', nav_privacy: 'Privacy',
+      nav_home: 'Home', nav_features: 'Features', nav_achievements: 'Achievements', nav_team: 'Team', nav_contact: 'Contact', nav_download: 'Download', nav_faq: 'FAQ', nav_privacy: 'Privacy', error_404_text: "This page doesn't exist. It may have been moved or deleted.", error_404_btn: 'Back to Home',
       hero_title: 'Make your digital life <br><span class="highlight">climate-smart</span>',
       hero_lead: 'GreenByte shows the CO₂ behind your browsing, streaming and AI use, then helps you reduce it with challenges, school leaderboards and AI tips.',
       problem_title: 'The problem',
@@ -133,7 +133,7 @@
     },
     uk: {
       title: 'GreenByte', tagline: 'Кожен байт має значення. Зроби свій зеленим.',
-      nav_home: 'Головна', nav_features: 'Функції', nav_achievements: 'Досягнення', nav_team: 'Команда', nav_contact: 'Контакти', nav_download: 'Завантажити', nav_faq: 'FAQ', nav_privacy: 'Конфіденційність',
+      nav_home: 'Головна', nav_features: 'Функції', nav_achievements: 'Досягнення', nav_team: 'Команда', nav_contact: 'Контакти', nav_download: 'Завантажити', nav_faq: 'FAQ', nav_privacy: 'Конфіденційність', error_404_text: 'Ця сторінка не існує. Можливо, її було переміщено або видалено.', error_404_btn: 'На головну',
       hero_title: 'Цифрове життя, <br><span class="highlight">розумне для клімату</span>',
       hero_lead: 'GreenByte показує CO₂ за вашим переглядом, стрімами та AI і допомагає зменшувати це через челенджі, рейтинги шкіл та AI-поради.',
       problem_title: 'Проблема',
