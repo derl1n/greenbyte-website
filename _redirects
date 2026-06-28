@@ -1,8 +1,2 @@
 # Block index.php duplicates
 /index.php    /    301!
-/index.html   /    301!
-
-# Block trailing slash duplicates (Netlify Pretty URLs handles most, but just in case)
-/download/    /download    301!
-/faq/         /faq         301!
-/privacy/     /privacy     301!
