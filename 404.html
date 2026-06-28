@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Page Not Found | GreenByte</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/png" href="/icons/logo.png">
+  <script>
+    (function(){
+      var t=localStorage.getItem('gb-theme');
+      if(t==='light') document.documentElement.classList.add('light');
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="/" class="brand-link"><img src="/icons/icon48.png" alt="GreenByte" class="logo"></a>
+      <div class="brand-text">
+        <a href="/" class="brand-link"><span class="brand-title">GreenByte</span></a>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="/">Home</a>
+      <a href="/download">Download</a>
+      <a href="/faq">FAQ</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="burger" id="burger" aria-label="Open menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero" style="min-height:50vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 20px">
+      <h1 style="font-size:72px;font-weight:800;margin:0;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent">404</h1>
+      <p style="font-size:20px;color:var(--muted);margin:12px 0 32px;max-width:400px">This page doesn't exist. It may have been moved or deleted.</p>
+      <a href="/" class="btn primary" style="display:inline-flex;gap:8px;align-items:center">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back to Home
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="/icons/icon48.png" alt="GreenByte">
+      GreenByte &copy; 2026
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
