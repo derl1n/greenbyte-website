@@ -1615,7 +1615,7 @@ main { flex: 1; } /* pushes footer to bottom */
   }
   .hero-inner { max-width: 100%; width: 100%; }
   .hero h1 {
-    font-size: 1.625rem;
+    font-size: 2rem;
     line-height: 1.2;
     letter-spacing: -.02em;
     margin-bottom: 12px;
