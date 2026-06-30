@@ -689,8 +689,8 @@ html.light .monitor-main .monitor-screen {
 .team-card:hover .team-avatar img,
 .team-card:hover .team-avatar svg { transform: scale(1.06); box-shadow: 0 0 24px rgba(52,211,153,.3); }
 .team-avatar {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid var(--border2);
@@ -727,6 +727,22 @@ html.light .monitor-main .monitor-screen {
   position: relative;
   z-index: 1;
   margin-top: 4px;
+}
+.team-insta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .2s;
+  position: relative;
+  z-index: 1;
+}
+.team-insta:hover {
+  color: #E1306C;
 }
 .contact-section {
   padding: 40px 60px 60px;

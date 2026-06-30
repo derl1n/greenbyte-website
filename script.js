@@ -98,7 +98,7 @@
       team_sub: 'The people behind GreenByte who make your digital life greener.',
       team_name1: 'Dmytro Fil',
       team_role1: 'Full-Stack Developer & Architect',
-      team_bio1: 'Develops GreenByte\'s backend, API and web platform. Manages the database, server logic, notification system and coordinates overall project architecture.',
+      team_bio1: 'Develops GreenByte\'s backend, API and web platform. Manages the database, server logic, notification system and coordinates overall project architecture and deployment.',
       team_name2: 'Nikita Lytvyn',
       team_role2: 'Software Developer',
       team_bio2: 'Developer of GreenByte\'s technical components. Builds the browser extension, contributes to the Windows app, web platform and works on testing and UX improvements.',
