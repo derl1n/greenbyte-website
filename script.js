@@ -306,8 +306,8 @@
         uk: { title: 'GreenByte FAQ | Цифровий трекер вуглецю', desc: 'Часті запитання про GreenByte – як працює відстеження CO₂, які дані залишаються локально, шкільні програми, GreenTokens та підтримувані платформи.' }
       },
       privacy: {
-        en: { title: 'GreenByte | Privacy & Security', desc: 'Learn how GreenByte protects your privacy – local-first CO₂ tracking, anonymized leaderboards, data retention policies and security practices.' },
-        uk: { title: 'GreenByte | Конфіденційність та безпека', desc: 'Дізнайтеся, як GreenByte захищає вашу конфіденційність – локальне відстеження CO₂, анонімізовані рейтинги, політика зберігання даних та безпека.' }
+        en: { title: 'GreenByte | Privacy Policy & Security', desc: 'GreenByte privacy policy and security practices. Local-first CO₂ tracking, anonymized leaderboards, transparent data retention. Your data stays on your device.' },
+        uk: { title: 'GreenByte | Політика конфіденційності та безпека', desc: 'Політика конфіденційності та безпека GreenByte. Локальне відстеження CO₂, анонімізовані рейтинги, прозоре зберігання даних. Ваші дані залишаються на вашому пристрої.' }
       }
     };
     const seo = (seoData[page] || seoData.index)[lang] || (seoData[page] || seoData.index).en;
