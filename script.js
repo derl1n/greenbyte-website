@@ -298,8 +298,8 @@
         uk: { title: 'GreenByte | Цифровий трекер вуглецю', desc: 'GreenByte відстежує ваш цифровий вуглецевий слід у реальному часі – CO₂ від перегляду, стрімів та AI, бейджі й рейтинги.' }
       },
       download: {
-        en: { title: 'GreenByte Download | Digital Carbon Tracker', desc: 'Download GreenByte for Windows or install the Chrome/Edge browser extension to start tracking your digital carbon footprint today.' },
-        uk: { title: 'GreenByte Завантажити | Трекер вуглецевого сліду', desc: 'Завантажте GreenByte для Windows або встановіть розширення для Chrome/Edge, щоб почати відстежувати свій цифровий вуглецевий слід.' }
+        en: { title: 'GreenByte | Download Digital Carbon Tracker', desc: 'Download GreenByte for Windows or install the Chrome/Edge browser extension to start tracking your digital carbon footprint today.' },
+        uk: { title: 'GreenByte | Завантажити трекер вуглецевого сліду', desc: 'Завантажте GreenByte для Windows або встановіть розширення для Chrome/Edge, щоб почати відстежувати свій цифровий вуглецевий слід.' }
       },
       faq: {
         en: { title: 'GreenByte FAQ | Digital Carbon Tracker', desc: 'Frequently asked questions about GreenByte – learn how CO₂ tracking works, what data stays local, school programs, GreenTokens and supported platforms.' },
@@ -307,7 +307,7 @@
       },
       privacy: {
         en: { title: 'GreenByte | Privacy Policy & Security', desc: 'GreenByte privacy policy and security practices. Local-first CO₂ tracking, anonymized leaderboards, transparent data retention. Your data stays on your device.' },
-        uk: { title: 'GreenByte | Політика конфіденційності та безпека', desc: 'Політика конфіденційності та безпека GreenByte. Локальне відстеження CO₂, анонімізовані рейтинги, прозоре зберігання даних. Ваші дані залишаються на вашому пристрої.' }
+        uk: { title: 'GreenByte | Політика конфіденційності та безпека', desc: 'Політика конфіденційності GreenByte. Локальне відстеження CO₂, анонімізовані рейтинги, прозоре зберігання даних. Ваші дані залишаються на пристрої.' }
       }
     };
     const seo = (seoData[page] || seoData.index)[lang] || (seoData[page] || seoData.index).en;
